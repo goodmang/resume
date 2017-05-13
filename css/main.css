@@ -1,0 +1,114 @@
+html {
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+}
+h1 {
+    margin-bottom: .5rem;
+}
+
+h6 {
+    color: #039be5;
+    font-weight: 400;
+}
+
+.row {
+    margin-bottom: 0;
+}
+.container .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.nav .row .col {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.headshot {
+    padding: 20px;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    color: white;
+}
+.tabs .tab a  {
+    color: #b3e5fc;
+}
+
+.tabs .indicator {
+    background-color: #b3e5fc;
+}
+
+.link-social,
+.link-social:hover {
+    color: white;
+    background-color: #0288d1;
+    border-radius: 100%;
+    padding: 19px;
+    border-width: 0;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.link-social:hover {
+    background-color: #b3e5fc;
+}
+.link-social .fa {
+    font-size: 2.2em;
+}
+
+.divider {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.main-area {
+    background-color: white;
+}
+
+.cover-letter .row .col {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.cover-letter aside {
+    padding-right: 50px;
+}
+
+.full-bleed {
+    padding: 0 !important;
+    margin: 0  !important;
+}
+footer address {
+    display: inline;
+}
+
+footer a {
+    color: #b3e5fc;
+}
+
+footer .row .col {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+
+@media only screen and (min-width: 601px) {
+    header {
+    -webkit-box-shadow: 0 8px 10px -3px #999;
+       -moz-box-shadow: 0 8px 10px -3px #999;
+            box-shadow: 0 8px 10px -3px #999;
+        z-index: 500;
+        position: relative;
+    }
+    .cover-letter .row {
+        display: flex;
+        align-items: stretch;
+    }
+    .row .letter-body {
+        padding-left: 50px;
+        box-shadow: -10px 0px 10px 1px #aaaaaa;
+    }
+}
