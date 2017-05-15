@@ -1,6 +1,10 @@
 html {
     font-weight: 300;
 }
+body {
+    background-color: #212121;
+    font-family: 'Raleway', sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 200;
@@ -9,38 +13,109 @@ h1 {
     margin-bottom: .5rem;
 }
 
-h6 {
+h4, h6 {
     color: #039be5;
     font-weight: 400;
 }
 
-.row {
-    margin-bottom: 0;
-}
-.container .row {
-    margin-left: 0;
-    margin-right: 0;
+.container {
+    padding-left: 0px;
+    padding-right: 0px; 
 }
 
-.nav .row .col {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-.headshot {
-    padding: 20px;
+section {
+    overflow: hidden;
 }
 
-.tabs .tab a:hover, .tabs .tab a.active {
+.row .col-12 {
+    padding-left: 8.3%;
+    padding-right: 8.3%;
+}
+
+.contact-area,
+.nav-area {
+    background-color: #0288d1;
+}
+
+.nav-area a {
+    color: #b3e5fc;
+    text-transform: uppercase;
+}
+
+.nav-area a:hover {
     color: white;
 }
-.tabs .tab a  {
+.social-area,
+.hero-area {
+    background-color: #039be5;
+    color: white;
+}
+
+.hero h2 {
     color: #b3e5fc;
 }
 
-.tabs .indicator {
-    background-color: #b3e5fc;
+.headshot {
+    padding: 20px;
+    /*border-radius: 100%;*/
 }
 
+.hero-area,
+.cover-letter aside,
+.letter-body, {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.resume-lead {
+    background-color: #555;
+    color: #bbb;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.resume aside {
+    padding-top: 20px;
+    padding-right: 10px !important;
+}
+
+.resume .progress {
+    width: 130px;
+    height: 12px;
+    margin-top: 5px;
+}
+
+.progress-bar {
+
+}
+.portfolio .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.portfolio h3,
+.portfolio a,
+.portfolio p {
+    padding-left: 8.3%;
+    padding-right: 8.3%;
+}
+
+.portfolio img {
+    margin-bottom: 15px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.social-area {
+    padding-top: 20px;
+}
+
+.social-area .col-12 {
+    text-align: center;
+    margin-bottom: 25px;
+}
 .link-social,
 .link-social:hover {
     color: white;
@@ -73,14 +148,10 @@ h6 {
     padding-bottom: 30px;
 }
 
-.cover-letter aside {
+/*.cover-letter aside {
     padding-right: 50px;
-}
+}*/
 
-.full-bleed {
-    padding: 0 !important;
-    margin: 0  !important;
-}
 footer address {
     display: inline;
 }
@@ -89,26 +160,97 @@ footer a {
     color: #b3e5fc;
 }
 
-footer .row .col {
+.contact-area {
     padding-top: 10px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+    color: #b3e5fc;
+    text-align: center;
+}
+/* Colors */
+.light-gray-bg {
+    background-color: #eceff1;
 }
 
 
-@media only screen and (min-width: 601px) {
-    header {
-    -webkit-box-shadow: 0 8px 10px -3px #999;
-       -moz-box-shadow: 0 8px 10px -3px #999;
-            box-shadow: 0 8px 10px -3px #999;
-        z-index: 500;
+
+@media (min-width: 768px) {
+    .container>header {
+        -webkit-box-shadow: 0px 13px 33px -2px rgba(0,0,0,0.67);
+        -moz-box-shadow: 0px 13px 33px -2px rgba(0,0,0,0.67);
+        box-shadow: 0px 13px 33px -2px rgba(0,0,0,0.67);
+        position: relative;
+        z-index: 99;
+
+    }
+    .row .first {
+        padding-left: 8.3%;
+    }
+    .row .last {
+        padding-right: 8.3%;
+    }
+
+    .hero-area {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .cover-letter aside,
+    .letter-body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .hero-area img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .portfolio img {
+        /*width: 60%;
+        height: auto;*/
+        margin-bottom: 0;
+    }
+
+    .project {
+        margin-bottom: 0;
+    }
+
+    .project-desc {
+        padding-top: 50px;
+        padding-right: 20px !important;
+    }
+
+    .odd .project-desc {
+        -webkit-box-shadow: -13px 0px 38px -3px rgba(0,0,0,0.86);
+        -moz-box-shadow: -13px 0px 38px -3px rgba(0,0,0,0.86);
+        box-shadow: -13px 0px 38px -3px rgba(0,0,0,0.86);
         position: relative;
     }
-    .cover-letter .row {
-        display: flex;
-        align-items: stretch;
+
+    .even .project-desc {
+        order: -1;
+        padding-left: 35px;
+        -webkit-box-shadow: 13px 0px 38px -3px rgba(0,0,0,0.86);
+        -moz-box-shadow: 13px 0px 38px -3px rgba(0,0,0,0.86);
+        box-shadow: 13px 0px 38px -3px rgba(0,0,0,0.86);
+        position: relative;
     }
-    .row .letter-body {
-        padding-left: 50px;
-        box-shadow: -10px 0px 10px 1px #aaaaaa;
+    .social-area {
+        padding-top: 40px;
+    }
+
+    /* Shadows */
+
+    .shadow-inset-right {
+        -webkit-box-shadow: inset -11px 0px 30px -8px rgba(0,0,0,0.64);
+        -moz-box-shadow: inset -11px 0px 30px -8px rgba(0,0,0,0.64);
+        box-shadow: inset -11px 0px 30px -8px rgba(0,0,0,0.64);
+    }
+
+    .shadow-inset-bottom {
+        -webkit-box-shadow: 0px 13px 30px -8px rgba(0,0,0,0.64);
+        -moz-box-shadow: 0px 13px 30px -8px rgba(0,0,0,0.64);
+        box-shadow: 0px 13px 30px -8px rgba(0,0,0,0.64);
+        position: relative;
+        z-index: 99;
     }
 }
