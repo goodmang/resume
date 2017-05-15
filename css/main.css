@@ -17,6 +17,9 @@ h4, h6 {
     color: #039be5;
     font-weight: 400;
 }
+h4 {
+    margin-bottom: 25px;
+}
 
 .container {
     padding-left: 0px;
@@ -27,14 +30,15 @@ section {
     overflow: hidden;
 }
 
-.row .col-12 {
-    padding-left: 8.3%;
-    padding-right: 8.3%;
-}
-
 .contact-area,
 .nav-area {
     background-color: #0288d1;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.nav-tabs {
+    border: none;
 }
 
 .nav-area a {
@@ -42,9 +46,23 @@ section {
     text-transform: uppercase;
 }
 
-.nav-area a:hover {
+.nav-tabs .nav-link.active {
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    color: white !important;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
     color: white;
 }
+
+.nav-tabs .nav-link.active:hover {
+    border-bottom: 2px solid #fff;
+    border-color: #fff;
+}
+
 .social-area,
 .hero-area {
     background-color: #039be5;
@@ -62,21 +80,38 @@ section {
 
 .hero-area,
 .cover-letter aside,
-.letter-body, {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.social-area {
+    padding: 25px;
+}
+
+.cover-letter aside,
+.letter-body,
+.history {
+    padding: 25px 40px;
+}
+
+.cover-letter aside {
+    background-color: #eceff1;
 }
 
 .resume-lead {
     background-color: #555;
     color: #bbb;
+    padding: 40px 40px 20px 40px;
+}
+
+.resume section {
+    margin-bottom: 30px;
+}
+
+.resume aside,
+.history {
     padding-top: 40px;
-    padding-bottom: 20px;
 }
 
 .resume aside {
-    padding-top: 20px;
-    padding-right: 10px !important;
+    padding-left: 40px;
+    padding-right: 10px;
 }
 
 .resume .progress {
@@ -84,10 +119,27 @@ section {
     height: 12px;
     margin-top: 5px;
 }
-
 .progress-bar {
-
+    background-color: #0288d1;
 }
+
+.history {
+    background-color: #eceff1;
+}
+
+.resume section {
+    margin-bottom: 50px;
+}
+
+.event-desc {
+    margin-bottom: 25px;
+}
+
+.event-date {
+    font-weight: bold;
+    order: -1;
+}
+
 .portfolio .col-12 {
     padding-left: 0;
     padding-right: 0;
@@ -109,7 +161,7 @@ section {
 }
 
 .social-area {
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .social-area .col-12 {
@@ -172,6 +224,45 @@ footer a {
 }
 
 
+/* Lists */
+
+ul.icon-list,
+.work ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.icon-list li {
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: .6em;
+}
+
+.icon-list i {
+    background-color: #8bbdd9;
+    color: white;
+    border-radius: 100%;
+    height: 65px;
+    width: 65px;
+    font-size: 3.5em;
+    padding-top: 15px;
+}
+
+.history ul :last-child .event-desc {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+
+
+/* tables */
+
+tbody>tr:first-child td {
+    border-top: none;
+}
 
 @media (min-width: 768px) {
     .container>header {
@@ -181,12 +272,6 @@ footer a {
         position: relative;
         z-index: 99;
 
-    }
-    .row .first {
-        padding-left: 8.3%;
-    }
-    .row .last {
-        padding-right: 8.3%;
     }
 
     .hero-area {
@@ -199,9 +284,63 @@ footer a {
         padding-top: 40px;
         padding-bottom: 40px;
     }
+
+    .cover-letter aside {
+        -webkit-box-shadow: inset -11px 0px 30px -8px rgba(0,0,0,0.64);
+        -moz-box-shadow: inset -11px 0px 30px -8px rgba(0,0,0,0.64);
+        box-shadow: inset -11px 0px 30px -8px rgba(0,0,0,0.64);
+    }
+    
+    .letter-body {
+        padding-left: 50px;
+    }
     .hero-area img {
         width: 200px;
         height: 200px;
+    }
+
+    .resume aside {
+        -webkit-box-shadow: 13px 0px 33px -2px rgba(0,0,0,0.3);
+        -moz-box-shadow: 13px 0px 33px -2px rgba(0,0,0,0.3);
+        box-shadow: 13px 0px 33px -2px rgba(0,0,0,0.3);
+        position: relative;
+        z-index:1
+    }
+
+    .event {
+        margin-left: -1px;
+    }
+
+    .event-desc,
+    .event-date {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 25px;
+    }
+
+    .event-date {
+        order: 3;
+    }
+
+    .history ul :last-child .event-date {
+        margin-bottom: 0;
+    }
+    
+
+    .history.col-12 {
+        padding-left: 6%;
+        padding-right: 8%;
+    }
+
+    .graphic-area {
+        background-image: url("../assets/work-line.png");
+        background-repeat: repeat-y;
+        background-position-x: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    .history ul {
+        padding-left: 0;
     }
 
     .portfolio img {
@@ -240,12 +379,6 @@ footer a {
 
     /* Shadows */
 
-    .shadow-inset-right {
-        -webkit-box-shadow: inset -11px 0px 30px -8px rgba(0,0,0,0.64);
-        -moz-box-shadow: inset -11px 0px 30px -8px rgba(0,0,0,0.64);
-        box-shadow: inset -11px 0px 30px -8px rgba(0,0,0,0.64);
-    }
-
     .shadow-inset-bottom {
         -webkit-box-shadow: 0px 13px 30px -8px rgba(0,0,0,0.64);
         -moz-box-shadow: 0px 13px 30px -8px rgba(0,0,0,0.64);
@@ -253,4 +386,29 @@ footer a {
         position: relative;
         z-index: 99;
     }
+}
+
+@media (min-width: 992px) {
+    .nav-area,
+    .hero-area {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    .cover-letter aside,
+    .resume aside {
+        padding-left: 105px;
+        padding-right: 50px;
+    }
+
+    .letter-body {
+        padding-right: 90px;
+    }
+
+    .resume-lead {
+        padding-left: 105px;
+        padding-right: 90px;
+    }
+
+
 }
